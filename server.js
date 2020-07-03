@@ -302,4 +302,4 @@ mongoose.connect(process.env.MONGODB_URI || process.env.MONGOHQ_URL || process.e
 }
 )
 
-app.listen(PORT,()=>{console.log('app is running on port 3001')});
+app.listen(process.env.PORT || 3001,()=>{console.log('app is running on port 3001')});
