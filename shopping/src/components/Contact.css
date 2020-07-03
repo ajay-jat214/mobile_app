@@ -1,0 +1,16 @@
+.hero {
+    background-image: url(/assets/shop.jpg);
+    height: 700px;
+    background-size: cover;
+    background-position: center right;
+    text-align: center;
+    color: black;
+}
+
+.hero2{
+	width:50%;
+	justify-content: center;
+	margin:10px auto;
+	margin-top: 20px;
+	z-index: -1;
+}

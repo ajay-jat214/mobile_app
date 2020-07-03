@@ -1,0 +1,59 @@
+.ajay2{  
+      height:450px;
+}
+
+
+
+.profile-pic {
+	position: relative;
+	display: inline-block;
+	position:relative;
+	
+}
+
+.profile-pic:hover .edit {
+	display: block;
+}
+
+.profile-pic:hover .yep {
+	display: block;
+}
+
+.edit {
+	padding-top: 7px;	
+	padding-right: 7px;
+	position: absolute;
+	right: 0;
+	top: 19rem;
+	display: none;
+	opacity:4;
+	height:33%;
+	width:33%;
+
+
+}
+
+.cart{
+	border-radius:50%;
+}
+
+.edit a {
+	color: #000;
+	border-radius: 50%;
+}
+
+.yep {
+	padding-top: 7px;	
+	padding-right: 7px;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	display: none;
+	opacity:1.8;
+	overflow:hidden;
+	
+}
+
+.yep b {
+	color: #000;
+}
