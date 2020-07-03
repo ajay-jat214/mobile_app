@@ -296,11 +296,9 @@ app.get('/', function(req, res) {
   res.sendFile(__dirname + '/index.html');
 });
 
-// app.disable('etag');
+app.disable('etag');
 
-if (cc && (cc.indexOf('no-cache') !== -1 ||
-  cc.indexOf('max-age=0') !== -1)) return false;
-  
+
 mongoose.connect(process.env.MONGODB_URI || process.env.MONGOHQ_URL || process.env.MONGOLAB_URI || 'mongodb+srv://ajay:ajstyles89@cluster0-zvrc2.mongodb.net/signup?retryWrites=true&w=majority',
 {useNewUrlParser:true,useUnifiedTopology:true},
 (req,res)=>{
