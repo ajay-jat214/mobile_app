@@ -279,7 +279,9 @@ app.post('/account/signin',(req,res)=>{
 })
 
 if(process.env.NODE_ENV==="production"){
-   app.use(express.static('shopping/build'));
+   app.use(express.static('shopping/build'),{ cacheControl: true, setHeaders: function(res, path) { 
+    res.setHeader("Cache-Control","max-age=31536000,must-revalidate");  
+} });
    const path=require('path');
    app.get("*",(req,res)=>{
      res.sendFile(path.resolve(__dirname,'shopping','build','index.html'));
