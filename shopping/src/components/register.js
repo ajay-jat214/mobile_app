@@ -18,7 +18,7 @@ class Register extends React.Component{
   	    
   	    if(event.target)
   	    this.setState({email:event.target.value})
-      console.log(event,'event.target.value')
+      console.log(event,event.target.value)
   	  }
 
   onPasswordChange=(event)=>{
