@@ -279,14 +279,20 @@ app.post('/account/signin',(req,res)=>{
 })
 
 if(process.env.NODE_ENV==="production"){
-   app.use(express.static('shopping/build'),{ cacheControl: true, setHeaders: function(res, path) { 
-    res.setHeader("Cache-Control","max-age=31536000,must-revalidate");  
-} });
+   app.use(express.static('shopping/build'));
    const path=require('path');
    app.get("*",(req,res)=>{
      res.sendFile(path.resolve(__dirname,'shopping','build','index.html'));
    })
 }
+
+const oneHour       = 3600000;    
+
+app.use(express.static('www', { maxAge: oneHour })); 
+
+app.get('/', function(req, res) {
+  res.sendFile(__dirname + '/index.html');
+});
 
 
 mongoose.connect(process.env.MONGODB_URI || process.env.MONGOHQ_URL || process.env.MONGOLAB_URI || 'mongodb+srv://ajay:ajstyles89@cluster0-zvrc2.mongodb.net/signup?retryWrites=true&w=majority',
