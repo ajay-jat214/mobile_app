@@ -277,8 +277,7 @@ app.post('/account/signin',(req,res)=>{
 
          });
 })
-var server_port = process.env.YOUR_PORT || process.env.PORT || 80;
-var server_host = process.env.YOUR_HOST || '0.0.0.0';
+
 
 
 if(process.env.NODE_ENV==="production"){
@@ -305,4 +304,4 @@ mongoose.connect(process.env.MONGODB_URI || process.env.MONGOHQ_URL || process.e
 }
 )
 
-app.listen(server_port,server_host,()=>{console.log('app is running on port 3001')});
+app.listen(PORT,"0.0.0.0",()=>{console.log('app is running on port 3001')});
