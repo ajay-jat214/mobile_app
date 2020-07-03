@@ -296,6 +296,7 @@ app.get('/', function(req, res) {
   res.sendFile(__dirname + '/index.html');
 });
 
+app.disable('etag');
 
 mongoose.connect(process.env.MONGODB_URI || process.env.MONGOHQ_URL || process.env.MONGOLAB_URI || 'mongodb+srv://ajay:ajstyles89@cluster0-zvrc2.mongodb.net/signup?retryWrites=true&w=majority',
 {useNewUrlParser:true,useUnifiedTopology:true},
