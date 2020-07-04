@@ -10,7 +10,7 @@ app.use(cors());
 var CartSchema=require('./cart');
 const {MONGOURI}=require('./config/keys');
 
-const PORT=process.env.PORT || 3001;
+const PORT=process.env.port || 3001;
 
 app.post('/cartmounting',(req,res)=>{
 
