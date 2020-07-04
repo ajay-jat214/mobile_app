@@ -128,19 +128,20 @@ deduct=async (id)=>{
       console.log(this.state.mycart)
       //this.setState({mycart:mycart});
       //this.forceUpdate();
-
+      this.state.rate[no]=0
+      this.forceUpdate();
+      this.state.count[no]=0;
+      this.forceUpdate();
        // for(let i in this.state.rate){
        //  this.state.total=this.state.total+this.state.rate[i];
        // }
-       
-      this.state.total=this.state.total-this.state.Values[no].rate*1.18*this.state.count[no];
+       this.state.total=0;
+       this.forceUpdate();
+      for(let i=0;i<10;i++){ 
+      this.state.total=this.state.total+this.state.rate[no]*1.18*this.state.count[no];
       this.forceUpdate();
+      }
       //console.log(this.state.total)
-      this.state.rate[no]=0
-      this.forceUpdate();
-
-      this.state.count[no]=0;
-      this.forceUpdate();
 
 
       this.state.Values[no].inCart=false;
