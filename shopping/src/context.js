@@ -138,7 +138,7 @@ deduct=async (id)=>{
        this.state.total=0;
        this.forceUpdate();
       for(let i=0;i<10;i++){ 
-      this.state.total=this.state.total+this.state.rate[no]*1.18*this.state.count[no];
+      this.state.total=this.state.total+this.state.rate[i]*1.18*this.state.count[i];
       this.forceUpdate();
       }
       //console.log(this.state.total)
