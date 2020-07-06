@@ -16,7 +16,7 @@ export default class navbar extends React.Component{
         console.log(rate[i])
       }
       //console.log( count,'ye h count buddy')
-      fetch('http://localhost:3001/logout',{
+      fetch('https://mobile-worldz.herokuapp.com/logout',{
       method:'post',
       headers:{Authentication:'Content-Type:application/json'},
       body:JSON.stringify({

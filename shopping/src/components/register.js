@@ -34,7 +34,7 @@ class Register extends React.Component{
   }
 
   onButtonSubmit=(event,response)=>{
-    fetch('http://localhost:3001/account/signup',{
+    fetch('https://mobile-worldz.herokuapp.com/account/signup',{
       method:'post',
       
       body:JSON.stringify({
