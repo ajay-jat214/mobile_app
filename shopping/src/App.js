@@ -18,7 +18,7 @@ export default class App extends Component {
   constructor(){
     super();
     this.state={
-      route:'home',
+      route:'signin',
       isSignedIn:false,
       email:'',
       user:{
