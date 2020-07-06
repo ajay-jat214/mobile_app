@@ -4,10 +4,10 @@
   "description": "",
   "main": "server.js",
   "proxy": "http://localhost:3000",
-"engines": {
-"node": "12.13.1",
-"npm": "6.13.4"
-},
+  "engines": {
+    "node": "12.13.1",
+    "npm": "6.13.4"
+  },
   "scripts": {
     "start": "nodemon server.js",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix shopping && npm run build --prefix shopping"
@@ -20,7 +20,6 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "mongoose": "^5.9.19",
-
     "nodemon": "^2.0.4"
   }
 }
